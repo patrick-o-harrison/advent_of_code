@@ -20,7 +20,6 @@ fn main() {
             eprintln!("Invalid argument.")
         }
     };
-
 }
 
 fn part1(input: &str) -> u32 {
@@ -34,12 +33,10 @@ fn part2(input: &str) -> u32 {
 fn visit_houses(num_visitors: usize, input: &str) -> u32 {
     let mut visitors = vec![(0, 0); num_visitors as usize];
     let mut visiterator = (0..num_visitors).cycle();
-    let mut visited = HashMap::from([
-        ((0i32,0i32), 1u32)
-    ]);
+    let mut visited = HashMap::from([((0i32, 0i32), 1u32)]);
     for c in input.chars() {
         let visitor = visiterator.next().unwrap();
-        let(mut x, mut y) = visitors[visitor as usize];
+        let (mut x, mut y) = visitors[visitor as usize];
         match c {
             '^' => y += 1,
             'v' => y -= 1,
