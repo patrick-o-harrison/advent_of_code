@@ -1,0 +1,8 @@
+[package]
+name = "day7-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+bumpalo = { version = "3.16.0", features = ["collections"] }
+regex = "1.11.1"
